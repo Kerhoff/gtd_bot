@@ -2,11 +2,11 @@
   "name": "gtd_bot",
   "version": "1.0.0",
   "description": "Getting Things Done Telegram Bot",
-  "main": "notion.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon notion.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node notion.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",

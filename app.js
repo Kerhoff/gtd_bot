@@ -1,9 +1,9 @@
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf');
+const config = require('./secrets');
 
+const BOT_TOKEN = config.botToken;
 
-const token = 'secret'
-
-const bot = new Telegraf(token)
+const bot = new Telegraf(BOT_TOKEN)
 const tasks = []
 
 bot.telegram.setMyCommands([

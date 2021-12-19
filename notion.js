@@ -1,14 +1,14 @@
 const { Client } = require("@notionhq/client");
+const config = require("./secrets");
 
-const notion = new Client({ auth: 'secret' })
-console.log(notion)
-
-const databaseId = 'secret'
+const NOTION_TOKEN = config.notionToken;
+const DATABASE_ID = config.databaseId;
+const notion = new Client({ auth: NOTION_TOKEN });
 
 async function addItem(text) {
   try {
     const response = await notion.pages.create({
-      parent: { database_id: databaseId },
+      parent: { database_id: DATABASE_ID },
       properties: {
         title: { 
           title:[
