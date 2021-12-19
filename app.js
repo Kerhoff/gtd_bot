@@ -1,7 +1,7 @@
 const { Telegraf } = require('telegraf')
 
 
-const token = '2131694630:AAE_URM08kXMwL8ixoRWaZQNg80BqUH6HyA'
+const token = 'secret'
 
 const bot = new Telegraf(token)
 const tasks = []

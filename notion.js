@@ -1,9 +1,9 @@
 const { Client } = require("@notionhq/client");
 
-const notion = new Client({ auth: 'secret_nmdusFO5yCiXoL1oUeJ7fi9PSIhquKYnVLMRnhd3NoZ' })
+const notion = new Client({ auth: 'secret' })
 console.log(notion)
 
-const databaseId = '17469c94fb514db1a3d25f005fc49cf5'
+const databaseId = 'secret'
 
 async function addItem(text) {
   try {
