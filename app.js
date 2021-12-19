@@ -36,27 +36,3 @@ bot.on('message', async (ctx) => {
 
 
 bot.launch()
-
-
-/*
-{
-    message_id: 25,
-    from: {
-      id: 199417171,
-      is_bot: false,
-      first_name: 'Aleksandr',
-      last_name: 'Lukashkin',
-      username: 'alukashkin',
-      language_code: 'en'
-    },
-    chat: {
-      id: 199417171,
-      first_name: 'Aleksandr',
-      last_name: 'Lukashkin',
-      username: 'alukashkin',
-      type: 'private'
-    },
-    date: 1639840284,
-    text: 'hii'
-  }
-*/

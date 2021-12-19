@@ -1,8 +1,8 @@
 const { Client } = require("@notionhq/client");
-const config = require("./secrets");
+const { notionToken, databaseId } = require("./secrets");
 
-const NOTION_TOKEN = config.notionToken;
-const DATABASE_ID = config.databaseId;
+const NOTION_TOKEN = notionToken;
+const DATABASE_ID = databaseId;
 const notion = new Client({ auth: NOTION_TOKEN });
 
 async function addItem(text) {
@@ -28,4 +28,21 @@ async function addItem(text) {
   }
 }
 
-addItem("Yurts in Big Sur, California")
+
+async function retrieveDatabase() {
+  const response = await notion.databases.retrieve({ database_id: DATABASE_ID });
+  console.log(response);
+};
+
+
+const findAllPages = async () => {
+  const response = await notion.databases.query({
+    database_id: DATABASE_ID,
+  });
+  console.log(response);
+};
+
+
+addItem("Yurts in Big Sur, California");
+retrieveDatabase();
+findAllPages();
